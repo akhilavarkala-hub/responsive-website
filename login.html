@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyStore</title>
+
+<style>
+
+/* =====================
+   BASIC RESET
+===================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eaeaea;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* =====================
+   MAIN HEADER
+===================== */
+.header{
+    background:#131921;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:10px;
+    flex-wrap:wrap;
+}
+
+/* LOGO */
+.logo img{
+    width:50px;
+    height:50px;
+}
+
+/* LOCATION */
+.location{
+    font-size:12px;
+    line-height:1.2;
+}
+
+/* SEARCH BAR */
+.search{
+    flex:1;
+    display:flex;
+    height:40px;
+    min-width:200px;
+}
+
+.search input{
+    flex:1;
+    border:none;
+    padding:0 10px;
+}
+
+.search button{
+    width:45px;
+    border:none;
+    background:#febd69;
+    cursor:pointer;
+}
+
+/* HEADER RIGHT */
+.header-right{
+    display:flex;
+    gap:20px;
+    font-size:13px;
+    align-items:center;
+}
+
+.header-right div{
+    line-height:1.2;
+}
+
+/* =====================
+   TOP NAV BAR
+===================== */
+.top-nav{
+    background:#232f3e;
+}
+
+.top-nav ul{
+    list-style:none;
+    display:flex;
+    gap:15px;
+    padding:8px 10px;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+}
+
+.top-nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* =====================
+   BANNER
+===================== */
+.banner{
+    width:100%;
+    max-height:380px;
+    overflow:hidden;
+}
+
+.banner img{
+    object-fit:cover;
+}
+
+/* =====================
+   PRODUCTS
+===================== */
+.products{
+    padding:20px;
+}
+
+.products h2{
+    margin-bottom:15px;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:20px;
+}
+
+/* PRODUCT CARD */
+.card{
+    background:white;
+    padding:15px;
+    border-radius:4px;
+}
+
+.card img{
+    height:180px;
+    object-fit:contain;
+    margin-bottom:10px;
+}
+
+.card h3{
+    font-size:16px;
+}
+
+.card p{
+    font-size:13px;
+    color:#555;
+    margin:5px 0;
+}
+
+.price{
+    color:#b12704;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.card button{
+    margin-top:8px;
+    width:100%;
+    padding:8px;
+    background:#ffd814;
+    border:none;
+    cursor:pointer;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer{
+    background:#131921;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+===================== */
+
+/* Tablet */
+@media(max-width:768px){
+
+    .location{
+        display:none;
+    }
+
+    .header{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .header-right{
+        justify-content:space-around;
+    }
+
+    .top-nav ul{
+        justify-content:center;
+    }
+}
+
+/* Mobile */
+@media(max-width:480px){
+
+    .header-right div{
+        display:none;
+    }
+
+    .header-right .cart{
+        display:block;
+        font-size:16px;
+    }
+
+    .logo img{
+        width:40px;
+        height:40px;
+    }
+
+    .search{
+        width:100%;
+    }
+
+    .banner{
+        max-height:220px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================
+     HEADER
+===================== -->
+<header class="header">
+
+    <div class="logo">
+        <img src="https://play-lh.googleusercontent.com/7onw5AC-ikmvrb81e3q3P9oPEiZNJctBRaVVRxSl_qNuXzVqDwzuUNezAWT6CIr-dw0">
+    </div>
+
+    <div class="location">
+        Deliver to<br><strong>India</strong>
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Search products">
+        <button>🔍</button>
+    </div>
+
+    <div class="header-right">
+        <div>Hello<br><strong>Account</strong></div>
+        <div>Returns<br><strong>Orders</strong></div>
+        <div class="cart">🛒 <strong>Cart</strong></div>
+    </div>
+
+</header>
+
+<!-- =====================
+     TOP NAV
+===================== -->
+<nav class="top-nav">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="registrationform.html">registration</a></li>
+        <li><a href="login.html">login</a></li>
+        <li><a href="contact.html">contact</a></li>
+    </ul>
+</nav>
+
+<!-- =====================
+     BANNER
+===================== -->
+<div class="banner">
+    <img src="https://m.media-amazon.com/images/G/31/img22/Wireless/Xiaomi/Redmi_13C/D113706389_WLD_Redmi13C_DesktopHero_1500x600.jpg">
+</div>
+
+<!-- =====================
+     PRODUCTS
+===================== -->
+<section class="products">
+<h2>Featured Products</h2>
+
+<div class="product-grid">
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/71xb2xkN5qL._AC_UY218_.jpg">
+<h3>Wireless Headphones</h3>
+<p>Noise cancellation, long battery</p>
+<div class="price">₹2,499</div>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/61Iz2yy2CKL._AC_UY218_.jpg">
+<h3>Smart Watch</h3>
+<p>Fitness tracking, heart rate</p>
+<div class="price">₹3,999</div>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/71vFKBpKakL._AC_UY218_.jpg">
+<h3>Bluetooth Speaker</h3>
+<p>Deep bass, waterproof</p>
+<div class="price">₹1,799</div>
+<button>Add to Cart</button>
+</div>
+
+<div class="card">
+<img src="https://m.media-amazon.com/images/I/61L1ItFgFHL._AC_UY218_.jpg">
+<h3>DSLR Camera</h3>
+<p>24MP, 4K recording</p>
+<div class="price">₹42,999</div>
+<button>Add to Cart</button>
+</div>
+
+</div>
+</section>
+
+<footer class="footer">
+© 2025 MyStore | Amazon-style UI
+</footer>
+
+</body>
+</html>
